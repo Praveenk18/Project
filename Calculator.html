@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CALCULATOR</title>
+</head>
+<link rel="stylesheet" type="text/css" href="calc.css";>
+		
+<body>
+	<div class="container">
+		<div class="calculator">
+	<input type="text"  placeholder="0" id="text">
+	<button onclick="Clear()">C</button>
+	<button onclick="del()">DEL</button>
+	<button value="%" onclick="display('%')">%</button>
+	<button value="/" onclick="display('/')">/</button>
+	<button value="7" onclick="display('7')">7</button>
+	<button value="8" onclick="display('8')">8</button>
+	<button value="9" onclick="display('9')">9</button>
+	<button value="*" onclick="display('*')">*</button>
+	<button value="4" onclick="display('4')">4</button>
+	<button value="5" onclick="display('5')">5</button>
+	<button value="6" onclick="display('6')">6</button>
+	<button value="+" onclick="display('+')">+</button>
+	<button value="1" onclick="display('1')">1</button>
+	<button value="2" onclick="display('2')">2</button>
+	<button value="3" onclick="display('3')">3</button>
+	<button value="-" onclick="display('-')">-</button>
+	<button value="." onclick="display('.')">.</button>
+	<button value="0" onclick="display('0')">0</button>
+	<button value="=" class="equal" onclick="Calculate()">=</button>
+</div>
+</div>
+<script>
+	var outputScreen = document.getElementById("text");
+
+function display(num){
+	outputScreen.value += num;
+}
+function Calculate(){
+	try{
+		outputScreen.value= eval(outputScreen.value)
+	}
+	catch(err)
+	{
+		alert("Invalid:(")
+	}  
+	}
+	function Clear(){
+		outputScreen.value="";
+	}
+	function del(){
+		outputScreen.value=outputScreen.value.slice(0,-1);
+	}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <script> 
+function display1(){
+    	var a=document.getElementById("calc1").value;
+    	document.getElementById("text").value=a;
+    }
+    function display2(){
+    	var a=document.getElementById("calc2").value;
+    	document.getElementById("text").value=a;
+    }
+    function display3(){
+    	var a=document.getElementById("calc3").value;
+    	document.getElementById("text").value=a;
+    }
+    function display4(){
+    	var a=document.getElementById("calc4").value;
+    	document.getElementById("text").value=a;
+    }
+    function display5(){
+    	var a=document.getElementById("calc5").value;
+    	document.getElementById("text").value=a;
+    }
+    function display6(){
+    	var a=document.getElementById("calc6").value;
+    	document.getElementById("text").value=a;
+    }
+    function display7(){
+    	var a=document.getElementById("calc7").value;
+    	document.getElementById("text").value=a;
+    }
+    function display8(){
+    	var a=document.getElementById("calc8").value;
+    	document.getElementById("text").value=a;
+    }
+    function display9(){
+    	var a=document.getElementById("calc9").value;
+    	document.getElementById("text").value=a;
+    }
+    function display0(){
+    	var a=document.getElementById("calc0").value;
+    	document.getElementById("text").value=a;
+    }
+    function displayadd(){
+    	var a=document.getElementById("add").value;
+    	document.getElementById("text").value=a;
+    }
+    function displaysub(){
+    	var a=document.getElementById("sub").value;
+    	document.getElementById("text").value=a;
+    }
+    function displaymul(){
+    	var a=document.getElementById("mul").value;
+    	document.getElementById("text").value=a;
+    }
+    function displaydivi(){
+    	var a=document.getElementById("divi").value;
+    	document.getElementById("text").value=a;
+    }
+    function displaymod(){
+    	var a=document.getElementById("mod").value;
+    	document.getElementById("text").value=a;
+    }
+    function displaydot(){
+    	var a=document.getElementById("dot").value;
+    	document.getElementById("text").value=a;
+    }
+    function displayequal(){
+    	var a=document.getElementById("equal").value;
+    	document.getElementById("text").value=a;
+    }
+</script>  -->
+
+<script>
+
+
+</script>
+var outputScreen = document.getElementById("text");
+
+function display(num){
+	outputScreen.value += num;
+}
+function Calculate(){
+	try{
+		outputScreen.value= eval(outputScreen.value)
+	}
+	catch(err)
+	{
+		alert("Invalid:(")
+	}  
+	}
+
+
+
+	function display(val) {
+		document.getElementById("text").value +=val;
+	}
+	
+	function Calculate(){
+		let outputScreen=document.getElementById("text").value;
+		document.getElementById("text").value=eval(outputScreen)
+	}
+
+
+	var outputScreen =document.getElementById("text")
+
+	function display(num){
+		outputScreen.value +=num;
+	}
+
+	function calculate(){
+		try{
+			outputScreen.value=eval(outputScreen.value)
+	}
+		catch(err){
+			alert("Invalid")
+		} 
